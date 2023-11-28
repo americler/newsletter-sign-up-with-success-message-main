@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Montserrat&family=Roboto:wght@400;700&family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+  --tomato: #ff6257;
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--charcoal-grey);
+  height: 100vh;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+#newsletter {
+  width: 800px;
+  padding: 20px;
+  border-radius: 20px;
+  color: var(--dark-slate-grey);
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#newsletter .type {
+  padding: 30px;
+  font-size: 16px;
+  width: 100%;
+}
+
+#newsletter .type h1 {
+  font-size: 48px;
+  color: var(--dark-slate-grey);
+  font-weight: 700;
+}
+
+#newsletter .type p {
+  margin: 30px 0;
+  line-height: 24px;
+}
+#newsletter .type ul {
+  list-style-type: none;
+}
+
+#newsletter .type ul li {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+#newsletter .type ul li img {
+  margin-right: 10px;
+}
+
+#newsletter .type form {
+  margin: 30px 0;
+}
+
+#newsletter .type input {
+  width: calc(100% - 42px);
+  padding: 20px;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+#newsletter .type input::placeholder {
+  color: var(--grey);
+}
+
+#newsletter .type .button {
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+  padding: 20px;
+  background-color: var(--dark-slate-grey);
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  text-decoration: none;
+}
+
+#newsletter .type .button:hover {
+  background-color: var(--tomato);
+}
+
+#newsletter .type .button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  border-radius: 8px;
+  transition: all 0.3s;
+  background: inherit;
+  -webkit-filter: blur(6px);
+  -moz-filter: blur(6px);
+  -o-filter: blur(6px);
+  -ms-filter: blur(6px);
+  filter: blur(6px);
+}
+
+#newsletter .type .button:hover::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translate3d(0px, 20px, 0) scale(0.95);
+  filter: blur(20px);
+  opacity: var(0.7);
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+
+#subscribing {
+  width: 300px;
+  padding: 40px;
+  border-radius: 20px;
+  color: var(--dark-slate-grey);
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+#subscribing img {
+  width: 48px;
+}
+
+#subscribing .type {
+  width: 100%;
+}
+
+#subscribing h1 {
+  margin: 20px 0;
+}
+
+#subscribing a.button {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--white);
+  padding: 20px;
+  background-color: var(--dark-slate-grey);
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  text-decoration: none;
+}
+
+#subscribing .button:hover {
+  background-color: var(--tomato);
+}
+
+#subscribing .button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  border-radius: 8px;
+  transition: all 0.3s;
+  background: inherit;
+  -webkit-filter: blur(6px);
+  -moz-filter: blur(6px);
+  -o-filter: blur(6px);
+  -ms-filter: blur(6px);
+  filter: blur(6px);
+}
+
+#subscribing .button:hover::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translate3d(0px, 20px, 0) scale(0.95);
+  filter: blur(20px);
+  opacity: var(0.7);
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+
+@media screen and (max-width: 375px) {
+  #newsletter {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #newsletter .image img {
+    width: 100%;
+  }
+  #newsletter .type {
+    order: 2; /* .type'ı ikinci sıraya yerleştir */
+    padding: 20px; /* İsteğe bağlı olarak padding ekleyebilirsiniz */
+  }
+
+  #newsletter .image {
+    order: 1; /* .image'ı birinci sıraya yerleştir */
+    margin-top: 20px; /* İsteğe bağlı olarak üst boşluk ekleyebilirsiniz */
+  }
+
+  #subscribing {
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    color: var(--dark-slate-grey);
+    background-color: var(--white);
+  }
+}
